@@ -28,110 +28,75 @@
         </ul>
       </header>
       <section>
-        <p>
-</p>
-    Stopwatch
-body { margin: 0 auto; width: 900px; color : #222; }
-pre { border:1px solid #ccc; padding:10px; background:#eee; }
-h3 { font-size:12pt; }
-h5 { color: green; font-size: 11pt; font-weight: normal; margin: 0; padding: 0; }
-.response{ color: #555555; font-size: 13px; margin: 10px 0; }
-    <h1>
-<a name="stopwatch---the-timer" class="anchor" href="#stopwatch---the-timer"><span class="octicon octicon-link"></span></a>StopWatch - The timer</h1>
+        <h1>
+<a name="stopwatch---the-jquery-timer" class="anchor" href="#stopwatch---the-jquery-timer"><span class="octicon octicon-link"></span></a>StopWatch - The jQuery timer</h1>
 
-<p>It's a jQuery plug-in. :)</p>
+<h2>
+<a name="its-a-jquery-plug-in-" class="anchor" href="#its-a-jquery-plug-in-"><span class="octicon octicon-link"></span></a>It's a jQuery plug-in. :)</h2>
 
-<h3>
-<a name="api-documentations" class="anchor" href="#api-documentations"><span class="octicon octicon-link"></span></a>API Documentations:</h3>
+<hr><h1>
+<a name="api-documentations" class="anchor" href="#api-documentations"><span class="octicon octicon-link"></span></a>API Documentations:</h1>
+
+<h2>
+<a name="initilization" class="anchor" href="#initilization"><span class="octicon octicon-link"></span></a>Initilization</h2>
 
 <pre>
-    <code>
-<h5>
-<a name="initilization-" class="anchor" href="#initilization-"><span class="octicon octicon-link"></span></a>Initilization </h5>
-$('.stopwatch').stopWatch();
-
-<h5>
-<a name="initilization-with-options" class="anchor" href="#initilization-with-options"><span class="octicon octicon-link"></span></a>Initilization with options</h5>
-$('.stopwatch').stopWatch( { 'format': 'MM:SS' } );
-$('.stopwatch').stopWatch( { 'format': 'HH:MM:SS' } );
-
-<h5>
-<a name="start-timer" class="anchor" href="#start-timer"><span class="octicon octicon-link"></span></a>Start timer</h5>
-$('.stopwatch').stopWatch('start');
-
-<h5>
-<a name="stop-timer" class="anchor" href="#stop-timer"><span class="octicon octicon-link"></span></a>Stop timer</h5>
-$('.stopwatch').stopWatch('stop');
-
-<h5>
-<a name="reset-timer" class="anchor" href="#reset-timer"><span class="octicon octicon-link"></span></a>Reset timer</h5>
-$('.stopwatch').stopWatch('reset');
-
-<h5>
-<a name="get-taken-time" class="anchor" href="#get-taken-time"><span class="octicon octicon-link"></span></a>Get taken time</h5>
-$('.stopwatch').stopWatch('timetaken');
-
-<h5>
-<a name="callbacks-onstart-onstop-and-onrest" class="anchor" href="#callbacks-onstart-onstop-and-onrest"><span class="octicon octicon-link"></span></a>Callbacks onStart, onStop and onRest</h5>
-$('.stopwatch').stopWatch( {
-    'format': 'MM:SS',
-    'onStart': function(){
-    alert('Called on onstart');
-     },
-    'onStop' : function(){
-        alert('Called on onstop');
-     },
-    'onReset': function(){
-        alert('Called on onreset');
-     },
-} );
-
-    </code>
+`$('.stopwatch').stopWatch();`
 </pre>
 
-<h3>
-<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example:</h3>
+<h2>
+<a name="initilization-with-options" class="anchor" href="#initilization-with-options"><span class="octicon octicon-link"></span></a>Initilization with options</h2>
 
 <pre>
-    <code>
-jQuery(document).ready(function() {
-    $('.stopwatch').stopWatch();
-    $('button.start').click( function(){
-    $('.stopwatch').stopWatch('start');
-    } );
-    $('button.stop').click( function(){
-    $('.stopwatch').stopWatch('stop');
-    $('.response span').html( $('.stopwatch').stopWatch('timetaken') );
-    } );
-    $('button.reset').click( function(){
-    $('.stopwatch').stopWatch('reset');
-    $('.response span').html( $('.stopwatch').stopWatch('timetaken') );
-    } );
-
-});
-    </code>
+`$('.stopwatch').stopWatch( { 'format': 'MM:SS' } );`
+`$('.stopwatch').stopWatch( { 'format': 'HH:MM:SS' } );`
 </pre>
 
-<h3>
-<a name="live-demonstration" class="anchor" href="#live-demonstration"><span class="octicon octicon-link"></span></a>Live Demonstration:</h3>
-
-<div></div>
-
-<div> Time Taken:  -- Seconds. </div>
-
-<p>Start
-Reset
-Stop</p>
-
-<h3>
-<a name="download-" class="anchor" href="#download-"><span class="octicon octicon-link"></span></a>Download </h3>
+<h2>
+<a name="start-timer" class="anchor" href="#start-timer"><span class="octicon octicon-link"></span></a>Start timer</h2>
 
 <pre>
-git clone git://github.com/shardiwal/stopWatch.git
+`$('.stopwatch').stopWatch('start');`
 </pre>
 
-<p>
-</p>
+<h2>
+<a name="stop-timer" class="anchor" href="#stop-timer"><span class="octicon octicon-link"></span></a>Stop timer</h2>
+
+<pre>
+`$('.stopwatch').stopWatch('stop');`
+</pre>
+
+<h2>
+<a name="reset-timer" class="anchor" href="#reset-timer"><span class="octicon octicon-link"></span></a>Reset timer</h2>
+
+<pre>
+`$('.stopwatch').stopWatch('reset');`
+</pre>
+
+<h2>
+<a name="get-taken-time" class="anchor" href="#get-taken-time"><span class="octicon octicon-link"></span></a>Get taken time</h2>
+
+<pre>
+`$('.stopwatch').stopWatch('timetaken');`
+</pre>
+
+<h2>
+<a name="callbacks-onstart-onstop-and-onrest" class="anchor" href="#callbacks-onstart-onstop-and-onrest"><span class="octicon octicon-link"></span></a>Callbacks onStart, onStop and onRest</h2>
+
+<pre>
+`$('.stopwatch').stopWatch( {`
+    `'format': 'MM:SS',`
+    `'onStart': function(){`
+        `alert('Called on onstart');`
+     `},`
+    `'onStop' : function(){`
+        `alert('Called on onstop');`
+     `},`
+    `'onReset': function(){`
+        `alert('Called on onreset');`
+     `},`
+`} );`
+</pre>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/shardiwal">shardiwal</a></p>
