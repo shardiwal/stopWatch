@@ -11,6 +11,8 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/shardiwal/stopWatch/master/stopWatch.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -102,6 +104,37 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+
+
+<h3>Live Demonstration:</h3>
+<div class="stopwatch"></div>
+<div class='response'> <label>Time Taken: </label> <span>--</span> Seconds. </div>
+<button class="start">Start</button>
+<button class="reset">Reset</button>
+<button class="stop">Stop</button>
+
+<h3>Download </h3>
+<pre>
+git clone git://github.com/shardiwal/stopWatch.git
+</pre>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    $('.stopwatch').stopWatch();
+    $('button.start').click( function(){
+	$('.stopwatch').stopWatch('start');
+    } );
+    $('button.stop').click( function(){
+	$('.stopwatch').stopWatch('stop');
+	$('.response span').html( $('.stopwatch').stopWatch('timetaken') );
+    } );
+    $('button.reset').click( function(){
+	$('.stopwatch').stopWatch('reset');
+	$('.response span').html( $('.stopwatch').stopWatch('timetaken') );
+    } );
+});
+</script>
+
   </body>
 </html>
